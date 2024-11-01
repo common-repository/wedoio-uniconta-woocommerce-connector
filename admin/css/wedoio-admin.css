@@ -1,0 +1,341 @@
+.mapping-table {
+  border-collapse: collapse;
+}
+
+.mapping-table td {
+  padding: 0;
+  border: 1px solid #ddd;
+}
+
+.mapping-table td input {
+  width: 100%;
+  border: none;
+}
+
+.mapping-table .mapping-btn {
+  width: 100%;
+  min-width: 25px;
+  height: 25px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  -ms-transition: all 250ms;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.mapping-table .mapping-btn.drag {
+  background: #6c6c6c;
+}
+
+.mapping-table .mapping-btn.add {
+  background: #71c06f;
+}
+
+.mapping-table .mapping-btn.rmv {
+  background: #ff0700;
+}
+
+.mapper-line,
+.mapper {
+  list-style: none;
+}
+
+.mapper-line ul li,
+.mapper ul li {
+  list-style: none;
+  margin-bottom: 1px;
+}
+
+.mapper-line .mapper-add-new,
+.mapper .mapper-add-new {
+  margin-top: 0;
+}
+
+.mapper-line .mapper-add-new .drag-handle,
+.mapper .mapper-add-new .drag-handle {
+  opacity: 0;
+  cursor: none;
+}
+
+.mapper-line .drag-handle,
+.mapper .drag-handle,
+.mapper-line .mapper-btn,
+.mapper .mapper-btn {
+  color: white;
+  background: black;
+  display: inline-block;
+  margin: 1px;
+  height: 29px;
+  line-height: 29px;
+  min-width: 29px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mapper-line .drag-handle:hover i,
+.mapper .drag-handle:hover i,
+.mapper-line .mapper-btn:hover i,
+.mapper .mapper-btn:hover i {
+  -webkit-transform: rotate(360deg) scale(1.5);
+  -moz-transform: rotate(360deg) scale(1.5);
+  -ms-transform: rotate(360deg) scale(1.5);
+  -o-transform: rotate(360deg) scale(1.5);
+}
+
+.mapper-line .drag-handle i,
+.mapper .drag-handle i,
+.mapper-line .mapper-btn i,
+.mapper .mapper-btn i {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  -ms-transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.mapper-line .drag-handle.new-line,
+.mapper .drag-handle.new-line,
+.mapper-line .mapper-btn.new-line,
+.mapper .mapper-btn.new-line {
+  background: #71c06f;
+}
+
+.mapper-line .drag-handle.rmv-line,
+.mapper .drag-handle.rmv-line,
+.mapper-line .mapper-btn.rmv-line,
+.mapper .mapper-btn.rmv-line {
+  background: #ff0700;
+}
+
+.mapper-line .drag-handle,
+.mapper .drag-handle {
+  background: #6c6c6c;
+  cursor: move;
+}
+
+.mapping-holder,
+.react-original-mapping {
+  display: none;
+}
+
+.loading-icon {
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  animation: App-logo-spin infinite 1s linear;
+}
+
+.react-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.react-mapping-helper {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  min-width: 300px;
+}
+
+.react-mapping-helper.api-displayer {
+  position: relative;
+  left: 0;
+  margin-left: 0;
+}
+
+.react-mapping-helper ul.helper-list li {
+  background: #fcfcfc;
+  border: 1px solid #ececec;
+  margin: 1px 0;
+  padding: 2px;
+  cursor: pointer;
+  -ms-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.react-mapping-helper ul.helper-list li:hover {
+  background: #ececec;
+}
+
+.react-mapping-helper .react-helper > a {
+  display: inline-block;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.react-mapping-helper small {
+  display: block;
+}
+
+.wedoio-checkbox input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.wedoio-checkbox label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.wedoio-checkbox label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.wedoio-checkbox input:checked + label {
+  background: #bada55;
+}
+
+.wedoio-checkbox input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.wedoio-checkbox label:active:after {
+  width: 55px;
+}
+
+.api-send {
+  min-width: 25px;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  display: inline-block;
+  border: 1px solid;
+  background: black;
+  color: white;
+  cursor: pointer;
+  -ms-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.api-send:hover {
+  background: white;
+  color: black;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================================
+  Mixins
+======================================================== */
+/* ========================================================
+  Progress Bar
+======================================================== */
+@-webkit-keyframes progress-bar-animate {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes progress-bar-animate {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.batch-state {
+  max-width: 500px;
+}
+
+.batch-state pre,
+.batch-state .time {
+  display: none;
+}
+
+.batch-state .msg {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.batch-meter {
+  max-width: 500px;
+  width: 0%;
+  -ms-transition: width 1s ease;
+  -webkit-transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  -o-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+.batch-meter.active {
+  width: 100%;
+}
+
+.progress {
+  overflow: hidden;
+  height: 10px;
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(top, #ccc 0%, #ddd 100%);
+  background-image: linear-gradient(to bottom, #ccc 0%, #ddd 100%);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  background-color: #79b;
+  background-size: 40px 40px;
+  border-radius: 10px 0 0 10px;
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 30%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.1) 33%, transparent 33%, transparent 46%, rgba(0, 0, 0, 0.1) 46%, rgba(0, 0, 0, 0.1) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 80%, rgba(0, 0, 0, 0.1) 80%, rgba(0, 0, 0, 0.1) 83%, transparent 83%, transparent 97%, rgba(0, 0, 0, 0.1) 97%, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 30%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.1) 34%, transparent 34%, transparent 46%, rgba(0, 0, 0, 0.1) 46%, rgba(0, 0, 0, 0.1) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 80%, rgba(0, 0, 0, 0.1) 80%, rgba(0, 0, 0, 0.1) 84%, transparent 84%, transparent 96%, rgba(0, 0, 0, 0.1) 96%, rgba(0, 0, 0, 0.1));
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -ms-transition: width 250ms ease;
+  -webkit-transition: width 250ms ease;
+  -moz-transition: width 250ms ease;
+  -o-transition: width 250ms ease;
+  transition: width 250ms ease;
+  -webkit-animation: progress-bar-animate 1s linear infinite;
+  animation: progress-bar-animate 1s linear infinite;
+}
